@@ -1,6 +1,6 @@
 
 //Q** - is triplet of points at the (x,y, result)
-export function bilint(x,y, Q11, Q12, Q21, Q22){
+export default function bilint(x,y, Q11, Q12, Q21, Q22){
     let x1 = Q11[0];
     let y1 = Q11[1];
     let result1 = Q11[2];
@@ -18,5 +18,5 @@ export function bilint(x,y, Q11, Q12, Q21, Q22){
     let result4 = Q22[2];
 
     return result1 * (x2 - x)* (y2 - y) + result2 * (x - x1) * (y2 - y) + result3 * (x2 - x) * (y - y1) + 
-    result4 * (x - x1) * (y - y1) * 1/((x2 - x1) * (y2 - y1));
+    result4 * (x - x1) * (y - y1) * (1/((x2 - x1) * (y2 - y1)));
 }
